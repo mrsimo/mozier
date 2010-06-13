@@ -32,7 +32,7 @@ class Mozier
       if tds = row.css("td") and tds.size > 3
         @info[idx] ||= {}
         @info[idx] = { :name        => tds[0].text.strip,
-                       :size        => tds[1].text.strip,
+                       :size        => tds[1].text.strip.to_size,
                        :last_backup => tds[2].text.strip.to_time }
       end
     end
