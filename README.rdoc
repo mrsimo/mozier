@@ -5,8 +5,11 @@ Small library to access backup info from mozy.com
 === Usage
 
 Instantiate a new Mozier object, and ask it for info.
-
+  
+  require 'mozier'
   moz = Mozier.new("your@user.com","andpassword")
   moz.info 
-  > [{:last_backup=>Sun Jun 13 13:35:27 +0200 2010, :size=>"28.5 MB", :name=>"AMICHI"},
-  >  {:last_backup=>nil, :size=>"0 Bytes", :name=>"Erasmo"}]
+  [
+    {:last_backup=>Sun Jun 13 13:35:27 +0200 2010, :size=>"28.5 MB", :name=>"AMICHI"},
+    {:last_backup=>nil, :size=>"0 Bytes", :name=>"Erasmo"}
+  ]
